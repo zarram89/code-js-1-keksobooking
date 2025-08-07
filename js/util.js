@@ -13,3 +13,21 @@ export const getRandomSubarray = (arr, min, max, unique = false) => {
     ? [...arr].sort(() => Math.random() - 0.5).slice(0, count)
     : Array.from({length: count}, () => getRandomArrayElement(arr));
 };
+
+export const getOfferType = (type) => {
+  switch (type) {
+    case 'flat':
+      return 'Квартира';
+    case 'bungalow':
+      return 'Бунгало';
+    case 'house':
+      return 'Дом';
+    case 'palace':
+      return 'Дворец';
+    case 'hotel':
+      return 'Отель';
+    default:
+      return 'Неизвестный тип жилья';
+  }
+};
+
